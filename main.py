@@ -16,7 +16,7 @@ app.url_map.converters['regex'] = RegexConverter
 
 @app.route("/")
 def hello():
-    return render_template('index.html')
+    return render_template('about.html')
 
 
 @app.route('/<regex(".*"):file_basename>.html')
