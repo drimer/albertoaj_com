@@ -76,11 +76,19 @@ General CSS
 	margin-left: 240px;
 	z-index: 1;
 }
+ul {
+	font-family: Verdana, Arial, sans-serif;
+	line-height: 1.6em;
+	color: #848484;
+	font-size: 8pt;
+        margin-bottom: 10px;
+}
 p {
 	font-family: Verdana, Arial, sans-serif;
 	line-height: 1.6em;
 	color: #848484;
 	font-size: 8pt;
+	margin-bottom: 10px;
 }
 h1 {
 	font-family: 'Droid Serif', Verdana, Arial, sans-serif;
@@ -985,6 +993,9 @@ Contact CSS
 }
 #contact p {
 	padding-top: 5px;
+}
+#contact .contact_method {
+        font-weight: bold;
 }
 #contactform h6 {
 	font-size: 12px;
