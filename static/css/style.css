@@ -986,9 +986,9 @@ Contact CSS
 	margin-bottom: 40px;
 	padding: 20px 70px 20px 0px;
 	;
-	border-right: 1px;
-	border-style: solid;
-	border-color: #d6d6d6;
+//	border-right: 1px;
+//	border-style: solid;
+//	border-color: #d6d6d6;
 }
 #contactform {
 	padding-top: 10px;
@@ -1183,6 +1183,23 @@ This is the CSS for the social links
 	background-repeat: no-repeat
 }
 .facebook_small a:hover {
+	background-position: 0 -17px;
+	color: #444444;
+}
+.linkedin_small a {
+	background-image: url(../images/linkedin_small.png);
+	background-position: 0 1px;
+	padding-bottom: 1px;
+	margin-bottom: 8px;
+	text-decoration: none;
+	font-size: 12px;
+	display: block;
+	height: 15px;
+	color: #727272;
+	padding-left: 20px;
+	background-repeat: no-repeat
+}
+.linkedin_small a:hover {
 	background-position: 0 -17px;
 	color: #444444;
 }
