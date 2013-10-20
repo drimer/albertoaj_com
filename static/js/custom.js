@@ -81,22 +81,29 @@ $("a.group").fancybox({
 	        items = $(this).closest('#content')
 		               .find('#container')
 		               .find('li');
+	        toggleElementsByTag(items, selected_tag, 'everything');
 
-	        $.each(items, function (index, item) {
-		    if (selected_tag == 'everything') {
-			$(item).show();
-		    } else if ($(item).data('tag') == selected_tag) {
-			$(item).show();
-		    } else {
-			$(item).hide();
-		    }
-		});
+	        var intros = $(this).closest('#content')
+	                            .find('.portfolio_intro');
+	        toggleElementsByTag(intros, selected_tag, '');
 
 		var link = $(this);
 		link.addClass('active').siblings().removeClass('active');
 	});
 
 $('#filter a:first').click();
+
+function toggleElementsByTag(elements, tag, tag_for_all) {
+    $.each(elements, function (index, item) {
+	if (tag == tag_for_all) {
+	    $(item).show();
+	} else if ($(item).data('tag') == tag) {
+	    $(item).show();
+	} else {
+	    $(item).hide();
+	}
+    });
+}
 
 function createList(text,items){
 // This is a helper function that takes the
