@@ -8,21 +8,25 @@
 
 {% block content %}
   <!--This is the START of the portfolio section-->
-  <div id="filter"></div>
+  <div id="filter">
+    <a href="#" data-tag="everything">Everything</a>
+    <a href="#" data-tag="github">Projects</a>
+    <a href="#" data-tag="courses">Courses</a>
+  </div>
   <img class="star-divider" src="static/images/subscribe_divider.png"/>
   <div class="portfolio_intro" data-tags="github">
     <h5>Projects on GitHub<h5>
-    <p>I have several small projects in my <a>GitHub profile<a>, but
+    <p>I have several small projects in my <a>GitHub profile</a>, but
     here are the ones I think can be worth mentioning.</p>
   </div>
   <div class="spacer"></div>
   <div id="container">
     <ul id="stage">
-      <li data-tags="github"><a href="#"><img src="static/images/portfolio/thumbs/image(1).jpg" alt="NetControl" /></a>
+      <li data-tag="github"><a href="#"><img src="static/images/portfolio/thumbs/image(1).jpg" alt="NetControl" /></a>
         <h6>NetControl</h6>
         <p>Read more<a class="readmore" href="project-sample.html">view →</a></p>
       </li>
-      <li data-tags="courses"><a href="#"><img src="static/images/portfolio/thumbs/image(2).jpg"
+      <li data-tag="courses"><a href="#"><img src="static/images/portfolio/thumbs/image(2).jpg"
       alt="Introduction to Artificial Intelligence" /></a>
         <h6>Introduction to Artificial Intelligence</h6>
         <p>Read more<a class="readmore" href="project-sample.html">view →</a></p>

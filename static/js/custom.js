@@ -67,44 +67,25 @@ $("a.group").fancybox({
 		}
 		return false;
 	});
-//some quicksand js
-	  	var items = $('#stage li'),
-		itemsByTags = {};
-// Looping though all the li items:
-	items.each(function(i){
-		var elem = $(this),
-			tags = elem.data('tags').split(',');
-// Adding a data-id attribute. Required by the Quicksand plugin:
-		elem.attr('data-id',i);
-		$.each(tags,function(key,value){
-// Removing extra whitespace:
-			value = $.trim(value);
-			if(!(value in itemsByTags)){
-// Create an empty array to hold this item:
-				itemsByTags[value] = [];
-			}
-// Each item is added to one array per tag:
-			itemsByTags[value].push(elem);
-		});
+
+        $('#filter a').click(function (e) {
+	    e.preventDefault();
+	    $(this).siblings().removeClass('active');
+	    $(this).addClass('active');
 	});
-// Creating the "Everything" option in the menu:
-	createList('Everything',items);
-// Looping though the arrays in itemsByTags:
-	$.each(itemsByTags,function(k,v){
-		createList(k,v);
-	});
-	$('#filter a').live('click',function(e){
+
+	$('#filter a').click(function(e){
 		e.preventDefault();
 
-	        var selected_tag = $(this).text();
+	        var selected_tag = $(this).data('tag');
 	        items = $(this).closest('#content')
 		               .find('#container')
 		               .find('li');
 
 	        $.each(items, function (index, item) {
-		    if (selected_tag == 'Everything') {
+		    if (selected_tag == 'everything') {
 			$(item).show();
-		    } else if ($(item).data('tags') == selected_tag) {
+		    } else if ($(item).data('tag') == selected_tag) {
 			$(item).show();
 		    } else {
 			$(item).hide();
@@ -113,11 +94,10 @@ $("a.group").fancybox({
 
 		var link = $(this);
 		link.addClass('active').siblings().removeClass('active');
-// Using the Quicksand plugin to animate the li items.
-// It uses data('list') defined by our createList function:
-$('#stage').quicksand(link.data('list').find('li'));
 	});
+
 $('#filter a:first').click();
+
 function createList(text,items){
 // This is a helper function that takes the
 // text of a menu button and array of li items
