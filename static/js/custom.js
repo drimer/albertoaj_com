@@ -94,13 +94,28 @@ $("a.group").fancybox({
 		createList(k,v);
 	});
 	$('#filter a').live('click',function(e){
+		e.preventDefault();
+
+	        var selected_tag = $(this).text();
+	        items = $(this).closest('#content')
+		               .find('#container')
+		               .find('li');
+
+	        $.each(items, function (index, item) {
+		    if (selected_tag == 'Everything') {
+			$(item).show();
+		    } else if ($(item).data('tags') == selected_tag) {
+			$(item).show();
+		    } else {
+			$(item).hide();
+		    }
+		});
+
 		var link = $(this);
-		
 		link.addClass('active').siblings().removeClass('active');
 // Using the Quicksand plugin to animate the li items.
 // It uses data('list') defined by our createList function:
 $('#stage').quicksand(link.data('list').find('li'));
-		e.preventDefault();
 	});
 $('#filter a:first').click();
 function createList(text,items){

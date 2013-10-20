@@ -637,6 +637,15 @@ About us CSS
 Portfolio CSS
 ******************************************************************/
 
+.portfolio_intro {
+	padding-top: 25px;
+	width: 720px;
+	padding-bottom: 15px;
+}
+.portfolio_intro p {
+	text-align: justify;
+	font-size: 10pt;
+}
 #filter {
 	display: block;
 	height: 20px;
