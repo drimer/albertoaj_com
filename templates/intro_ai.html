@@ -1,0 +1,46 @@
+{% extends "portfolio.html" %}
+
+{% block title %}
+{{ super() }} - Introduction to Artificial Intelligence
+{% endblock %}
+
+{% block section_header_text %}
+{{ super() }} - Introduction to Artificial Intelligence
+{% endblock %}
+
+{% block content %}
+  <!--This is the START of the project-->
+  <div class="project">
+    <div id="description">
+      <h3>This is the project title</h3>
+      <p>Ut ligula sapien, vulputate nec vulputate eget, semper ac augue. Sed varius ante leo, vel tristique libero. Aenean eros felis, auctor a congue ut, pellentesque vel elit. Vivamus imperdiet ultricies diam sit amet euismod. Duis nec purus quis neque commodo porta sit amet vitae mi. Curabitur vestibulum ante convallis enim fringilla posuere. In ac erat ut magna cursus faucibus.</p>
+    </div>
+    <ul id="work">
+      <li>This is the first item</li>
+      <li>This is the second item</li>
+      <li>This is the third item</li>
+      <li>This is the fourth item</li>
+    </ul>
+  </div>
+  <!--END of project-->
+  <!--This is the START of the gallery-->
+  <div class="spacer"></div>
+  <div class="project-summary">
+    <div class="one-third"> <a class="single_image" rel="gallery1" href="static/images/sample-project/large/project1.jpg"><img src="static/images/sample-project/thumbs/project1.jpg" width="220" height="132" alt="sample-project1" /></a> <a class="single_image" rel="gallery1" href="static/images/sample-project/large/project2.jpg"></a> <a class="single_image" rel="gallery1" href="static/images/sample-project/large/project3.jpg"></a>
+      <h6>24.5.2009</h6>
+      <p>Moo cards done.<a class="readmore" href="#">read more →</a></p>
+    </div>
+    <div class="one-third"> <a class="single_image" rel="gallery2" href="static/images/sample-project/large/project3.jpg"><img src="static/images/sample-project/thumbs/project3.jpg" width="220" height="132" alt="sample-project3" /></a> <a class="single_image" rel="gallery2" href="static/images/sample-project/large/project2.jpg"></a> <a class="single_image" rel="gallery2" href="static/images/sample-project/large/project1.jpg"></a>
+      <h6>1.6.2009</h6>
+      <p>Like printing?<a class="readmore" href="#">read more →</a></p>
+    </div>
+    <div class="one-third-last"> <a class="single_image" rel="gallery3" href="static/images/sample-project/large/project2.jpg"><img src="static/images/sample-project/thumbs/project2.jpg" width="220" height="132" alt="sample-project2" /></a> <a class="single_image" rel="gallery3" href="static/images/sample-project/large/project3.jpg"></a> <a class="single_image" rel="gallery3" href="static/images/sample-project/large/project1.jpg"></a>
+      <h6>22.7.2009</h6>
+      <p>Sweeeeeet.<a class="readmore" href="#">read more →</a></p>
+    </div>
+  </div>
+  <!--END of gallery-->
+  <div class="spacer"></div>
+</div>
+<!--END of content-->
+{% endblock content %}
