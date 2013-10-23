@@ -134,6 +134,12 @@ h6 {
 	text-decoration: none;
 	font-size: 10pt;
 }
+p {
+	font-family: 'Droid Serif', Verdana, Arial, sans-serif;
+	line-height: 1.6em;
+	text-decoration: none;
+	font-size: 10pt;
+}
 /***************************************************
 COLUMNS and FEATURES
 ***************************************************/
@@ -763,7 +769,6 @@ This CSS is for the project page
 	font-family: 'Droid Sans', Verdana, Arial, sans-serif;
 	text-decoration: none;
 	font-size: 10pt;
-	color: #666;
 	padding-left: 20px;
 	padding-top: 2px;
 }
@@ -1185,7 +1190,7 @@ This is the CSS for the social links
 	padding-bottom: 1px;
 	margin-bottom: 8px;
 	text-decoration: none;
-	font-size: 12px;
+	font-size: 16px;
 	display: block;
 	height: 15px;
 	color: #727272;
@@ -1236,7 +1241,7 @@ This is the CSS for the social links
 	padding-bottom: 1px;
 	margin-bottom: 8px;
 	text-decoration: none;
-	font-size: 12px;
+	font-size: 16px;
 	display: block;
 	height: 15px;
 	color: #727272;
