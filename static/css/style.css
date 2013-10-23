@@ -722,15 +722,50 @@ Portfolio CSS
 /******************************************************************
 This CSS is for the project page
 ******************************************************************/
-#project-title {
+.project-title {
 	display: block;
 	font-family: Verdana, Arial, sans-serif;
 	line-height: 1.6em;
 	color: #666;
 	text-decoration: none;
 	font-size: 18pt;
-	float: right;
+	float: left;
 	padding-top: 10px;
+	width: 70%;
+}
+.project-subtitle {
+	display: block;
+	font-family: Verdana, Arial, sans-serif;
+	line-height: 1.6em;
+	color: #666;
+	text-decoration: none;
+	font-size: 14pt;
+	float: left;
+	padding-top: 10px;
+	width: 70%;
+}
+.project-thumb {
+	display: inline-block;
+	float: right;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.project-section {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.project-section h3 {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 14pt;
+	color: #666;
+}
+.project-section li {
+	font-family: 'Droid Sans', Verdana, Arial, sans-serif;
+	text-decoration: none;
+	font-size: 10pt;
+	color: #666;
+	padding-left: 20px;
+	padding-top: 2px;
 }
 .project {
 	padding-top: 50px;
