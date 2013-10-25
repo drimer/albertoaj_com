@@ -1,6 +1,9 @@
-from flask import Flask, render_template
+import re
+
+from flask import Flask, render_template, render_template_string
 from werkzeug.routing import BaseConverter
 
+from library import template
 
 app = Flask(__name__, template_folder='templates', static_path='/static')
 
@@ -14,14 +17,17 @@ class RegexConverter(BaseConverter):
 app.url_map.converters['regex'] = RegexConverter
 
 
+
+
 @app.route("/")
 def hello():
-    return render_template('about.html')
+    return render_template_string(template.render_template('about.html'))
 
 
 @app.route('/<regex(".*"):file_basename>.html')
 def contact(file_basename):
-    return render_template('%s.html' % file_basename)
+    template_path = '%s.html' % file_basename
+    return template.render_template(template_path)
 
 
 if __name__ == "__main__":
