@@ -13,4 +13,8 @@ def render_template(template_path):
                      r'\1%s\2\3\4' % BASE_URL,
                      in_str)
 
+    out_str = re.sub(r'(<a.*href=")([a-z/])(.*)(")',
+                     r'\1%s\2\3\4' % BASE_URL,
+                     out_str)
+
     return out_str
