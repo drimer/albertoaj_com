@@ -2,7 +2,7 @@ from flask import Flask, render_template
 from werkzeug.routing import BaseConverter
 
 
-app = Flask(__name__, template_folder='templates', static_path='/static')
+app = Flask(__name__)
 
 
 class RegexConverter(BaseConverter):
